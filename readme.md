@@ -1,4 +1,4 @@
-Pytrends
+Python-Trends
 ======
 
 A python module for grabbing data from Google Trends & Google Correlate (coming soon)
