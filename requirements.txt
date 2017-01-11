@@ -1,0 +1,4 @@
+nose
+pandas
+numpy
+nltk
