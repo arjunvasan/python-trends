@@ -1,5 +1,5 @@
 import pandas as pd
-import google
+import gtrends
 import unittest
 
 """
@@ -18,7 +18,7 @@ class TestSuite(unittest.TestCase):
         return SESSION
 
     def test_get_session(self):
-        assert isinstance(self.get_session(), google.Session)
+        assert isinstance(self.get_session(), gtrends.Session)
 
     def test_google_login(self):
         self.get_session()
@@ -26,7 +26,7 @@ class TestSuite(unittest.TestCase):
     def test_trends_fetch(self):
 
         session = self.get_session()
-        trends = google.Trends(session)
+        trends = gtrends.Trends(session)
         data = trends.fetch(q="Trump")
 
         assert isinstance(data, pd.DataFrame)
